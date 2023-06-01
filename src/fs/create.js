@@ -6,7 +6,7 @@ const error = "FS operation failed";
 const create = async () => {
   fs.writeFile("src/fs/files/fresh.txt", content, (err) => {
     if (err) {
-      console.error(error);
+      throw new Error(error)
     }
   });
 };
